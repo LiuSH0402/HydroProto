@@ -9,6 +9,7 @@ redistribute the ESM-2 650M base model. Obtain
 `facebook/esm2_t33_650M_UR50D` separately and provide its local directory through
 the command-line interfaces documented in the project README.
 
-The Zenodo DOI will be added here after the first record is created. Compact
+The locked final checkpoints are archived at
+[doi:10.5281/zenodo.22020952](https://doi.org/10.5281/zenodo.22020952). Compact
 result tables and the archive description are available in
 `../results/RESULT_ARCHIVE.md`.

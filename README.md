@@ -1,5 +1,7 @@
 # HydroProto
 
+[![Model archive DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22020952.svg)](https://doi.org/10.5281/zenodo.22020952)
+
 HydroProto is a prototype-guided protein language model for five-class bacterial
 hydrolase prediction. It combines ESM-2 650M representations with class-conditional
 online multi-prototype learning and is evaluated under both ordinary random-split
@@ -124,11 +126,21 @@ every local and server artifact to its source. Before public release, upload the
 selected weights and result bundle to a versioned data repository and replace the
 placeholder instructions in [`models/README.md`](models/README.md).
 
+The four locked final checkpoints are archived on Zenodo under
+[doi:10.5281/zenodo.22020952](https://doi.org/10.5281/zenodo.22020952).
+
+## Authors
+
+- Shang-Hua Liu ([ORCID: 0009-0003-9000-7379](https://orcid.org/0009-0003-9000-7379))
+- Ke-Jun Deng (corresponding author)
+
+Affiliation: The Clinical Hospital of Chengdu Brain Science Institute, School of
+Life Science and Technology and Center for Informational Biology, University of
+Electronic Science and Technology of China, Chengdu 610054, China.
+
 ## Release checklist
 
-- Add the final repository URL and archived-weight DOI.
 - Select and add a software license; none is assumed by this preparation step.
-- Add author, affiliation, contact and citation metadata.
 - Run the tests in a clean environment and publish the exact data accession list.
 
 ## Acknowledgements

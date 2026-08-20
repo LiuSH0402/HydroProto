@@ -4,8 +4,8 @@ The Git repository contains only compact summary tables and documentation. The
 complete internal archive, including fold-level predictions, logs, figures and
 development checkpoints, is intentionally stored outside this repository. The
 public Zenodo release contains the four locked final checkpoints together with
-their configurations, metrics, predictions and SHA-256 checksums. Its DOI will be
-added here after the first Zenodo record is created.
+their configurations, metrics, predictions and SHA-256 checksums:
+[doi:10.5281/zenodo.22020952](https://doi.org/10.5281/zenodo.22020952).
 
 ## Compact tables included here
 
