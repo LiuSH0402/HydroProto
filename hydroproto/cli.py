@@ -7,6 +7,7 @@ from importlib import import_module
 
 
 COMMANDS = {
+    "predict": "hydroproto.predict",
     "mlp": "hydroproto.esm2_mlp",
     "local": "hydroproto.hydrolocal",
     "proto": "hydroproto.hydroproto",

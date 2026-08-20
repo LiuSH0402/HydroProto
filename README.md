@@ -111,14 +111,51 @@ The reference GPU environment used Python 3.10.16, PyTorch 2.6.0+cu126, and
 Transformers 4.49.0. See [`INSTALL.md`](INSTALL.md) for alternative installation
 and sanity-check commands.
 
+## Quick prediction (no training)
+
+After placing the downloaded HydroProto checkpoint and ESM-2 backbone in the
+default directories shown above, run:
+
+```bash
+hydroproto predict --input-csv examples/predict_sequences.csv
+```
+
+This performs inference only. It does not train or modify the downloaded model.
+By default it uses:
+
+```text
+task checkpoint: models/hproto_unfreeze4_epoch23/final_trainable_state.pt
+task config:     models/hproto_unfreeze4_epoch23/config.json
+ESM-2 backbone:  hf_cache/esm2_t33_650M_UR50D/
+predictions:     outputs/predictions.csv
+run metadata:    outputs/predictions.metadata.json
+device:          CUDA when available, otherwise CPU
+```
+
+For custom locations or another output file:
+
+```bash
+hydroproto predict \
+  --input-csv /path/to/sequences.csv \
+  --checkpoint-dir models/hproto_unfreeze4_epoch23 \
+  --model-dir hf_cache/esm2_t33_650M_UR50D \
+  --output-csv outputs/my_predictions.csv \
+  --device cuda
+```
+
+The other released checkpoints can be selected with `--model-type mlp`,
+`--model-type hydrolocal`, or `--model-type hydrompc`. Their matching default
+directories under `models/` are selected automatically. Add `--overwrite` only
+when you intentionally want to replace an existing output CSV.
+
 ## Input format
 
-Sequence inputs are CSV tables with unique `accession`, `label`, and `sequence`
-columns:
+Prediction inputs are CSV tables with unique `accession` and `sequence` columns.
+A true label is not required:
 
 ```csv
-accession,label,sequence
-P33229,EC3.1_ester_bonds,MRYDNVKPCPFCGCPSVTVKAISGYYRAK...
+accession,sequence
+P33229,MRYDNVKPCPFCGCPSVTVKAISGYYRAK...
 ```
 
 Accepted labels are:
@@ -131,8 +168,13 @@ EC3.5_CN_nonpeptide
 EC3_other
 ```
 
-The study datasets are already included as `data/train_dataset.csv` and
-`data/test_dataset.csv`. Detailed validation rules and checksums are in
+The output CSV preserves `accession` and adds `sequence_length`, `chunks`,
+`predicted_label`, `confidence`, and one probability column for each of the five
+classes. The row order is the same as the input CSV.
+
+Training and evaluation tables additionally contain a `label` column. The study
+datasets are included as `data/train_dataset.csv` and `data/test_dataset.csv`.
+Detailed validation rules and checksums are in
 [`docs/DATA_FORMAT.md`](docs/DATA_FORMAT.md) and [`data/README.md`](data/README.md).
 
 ## Usage
@@ -178,10 +220,8 @@ hydroproto final \
 ```
 
 This is a training/reproduction command; it does not overwrite or silently reuse
-the downloaded locked checkpoint. The downloaded Zenodo directories preserve the
-published model weights, configuration, metrics, and predictions as immutable
-release artifacts. The four checkpoints have model-specific state-dictionary
-layouts and must be loaded with their corresponding implementations.
+the downloaded locked checkpoint. Use `hydroproto predict` for direct batch
+inference with the released model weights.
 
 The earlier frozen-embedding experiments are available through `embed`,
 `embedding-train`, and `embedding-cv`. The sequence-similarity baseline is

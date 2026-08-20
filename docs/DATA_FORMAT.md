@@ -1,6 +1,29 @@
 # Data format
 
-Input is a UTF-8 CSV file with three required columns:
+## Batch prediction
+
+`hydroproto predict` accepts a UTF-8 CSV file with two required columns:
+
+```text
+accession,sequence
+```
+
+`accession` must be unique and non-empty. `sequence` is case-insensitive,
+whitespace is removed, and only valid amino-acid symbols are accepted. A ground
+truth label is not required. See `examples/predict_sequences.csv` for a ready-to-run
+example.
+
+The prediction output contains:
+
+```text
+accession,sequence_length,chunks,predicted_label,confidence,
+p_EC3.1_ester_bonds,p_EC3.2_glycosylases,p_EC3.4_peptidases,
+p_EC3.5_CN_nonpeptide,p_EC3_other
+```
+
+## Training and evaluation
+
+Training and evaluation use three required columns:
 
 ```text
 accession,label,sequence

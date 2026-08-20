@@ -4,6 +4,7 @@ scikit-learn==1.6.1
 scipy==1.15.2
 torch==2.6.0
 transformers==4.49.0
+accelerate>=0.26,<2
 tqdm==4.67.1
 PyYAML==6.0.2
 matplotlib>=3.9,<4

@@ -34,10 +34,19 @@ The checkpoints contain the fine-tuned trainable layers and task heads but not t
 complete ESM-2 backbone. Obtain `facebook/esm2_t33_650M_UR50D` separately, place it
 at `../hf_cache/esm2_t33_650M_UR50D/`, and provide that path through `--model-dir`.
 
+With the default HydroProto directory and backbone in place, batch prediction is:
+
+```bash
+hydroproto predict --input-csv examples/predict_sequences.csv
+```
+
+The command reads `hproto_unfreeze4_epoch23/config.json` and
+`hproto_unfreeze4_epoch23/final_trainable_state.pt` automatically and writes
+`outputs/predictions.csv`. It performs no training.
+
 Historical directory names use `hlocal`, `hproto`, and `hydrompc`; their public
-model names are HydroLocal, HydroProto, and HydroMPC. The four checkpoint files
-have model-specific state-dictionary layouts, so load each one with its
-corresponding model implementation.
+model names are HydroLocal, HydroProto, and HydroMPC. The `hydroproto predict`
+command selects the correct model-specific checkpoint loader.
 
 Compact result tables and the archive description are available in
 [`../results/RESULT_ARCHIVE.md`](../results/RESULT_ARCHIVE.md).

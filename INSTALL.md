@@ -26,4 +26,5 @@ snapshot or model directory with `--model-dir`.
 python -m compileall hydroproto scripts
 pytest -q
 hydroproto --help
+hydroproto predict --help
 ```
