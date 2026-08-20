@@ -15,15 +15,6 @@ HydroProto represents each of five enzyme classes with five learnable prototypes
 (25 prototypes in total). The repository also includes three controlled
 comparators: **ESM2-MLP**, **HydroLocal**, and **HydroMPC**.
 
-## Highlights
-
-- Five-class prediction for bacterial EC 3 hydrolases.
-- ESM-2 650M encoder with partial layer fine-tuning.
-- Online multi-prototype learning for heterogeneous enzyme subfamilies.
-- Fixed public train/test split with 2,721 training and 680 test sequences.
-- Four locked final checkpoints and their test predictions archived on Zenodo.
-- Homology-stratified evaluation at `<80%`, `<60%`, and `<40%` train similarity.
-
 ## Repository structure
 
 ```text
