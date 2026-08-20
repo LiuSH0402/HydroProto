@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Environments and editors
+.env
+.idea/
+.vscode/
+
+# Model and data artifacts
+models/*.pt
+models/*.pth
+models/*.ckpt
+models/*.bin
+models/*.safetensors
+data/private/
+outputs/
+hf_cache/
+wandb/
+
+# OS
+.DS_Store
+Thumbs.db

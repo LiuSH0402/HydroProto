@@ -1,0 +1,12 @@
+numpy==2.1.2
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.15.2
+torch==2.6.0
+transformers==4.49.0
+tqdm==4.67.1
+PyYAML==6.0.2
+matplotlib>=3.9,<4
+seaborn>=0.13,<1
+fair-esm==2.0.0
+biopython>=1.85,<2
