@@ -16,6 +16,11 @@ models/*.pth
 models/*.ckpt
 models/*.bin
 models/*.safetensors
+models/**/*.pt
+models/**/*.pth
+models/**/*.ckpt
+models/**/*.bin
+models/**/*.safetensors
 data/private/
 outputs/
 hf_cache/
