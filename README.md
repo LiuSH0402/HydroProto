@@ -102,7 +102,7 @@ The reference GPU environment used Python 3.10.16, PyTorch 2.6.0+cu126, and
 Transformers 4.49.0. See [`INSTALL.md`](INSTALL.md) for alternative installation
 and sanity-check commands.
 
-## Quick prediction (no training)
+## Quick prediction
 
 After placing the downloaded HydroProto checkpoint and ESM-2 backbone in the
 default directories shown above, run:
