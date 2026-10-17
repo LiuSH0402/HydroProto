@@ -12,8 +12,23 @@ feature space, and classified with class-conditional online prototypes. Long
 sequences are evaluated in overlapping windows and their predictions are averaged.
 
 HydroProto represents each of five enzyme classes with five learnable prototypes
-(25 prototypes in total). The repository also includes three controlled
+(25 prototypes in total). The repository also includes three
 comparators: **ESM2-MLP**, **HydroLocal**, and **HydroMPC**.
+
+## Data availability and license
+
+Project source code is released under the [MIT License](LICENSE), copyright
+2026 Shang-Hua Liu and Ke-Jun Deng. Third-party data and model terms remain
+applicable. [Data provenance and filtering](docs/DATA_PROVENANCE.md) describe
+the author-reported January 2025 retrieval, EC-derived labels, cleaning rules
+and pooled identity/no-hit interpretation.
+
+The original fixed train/test files remain unchanged. The v0.2.0 update adds
+the [80%-component split and external test dataset](data/revision/README.md),
+with identifiers, source annotations, selection criteria and checksums.
+New experimental code, predictions and statistical exports are not included
+in this dataset/documentation update. Existing task-model download links remain
+in [models/README.md](models/README.md).
 
 ## Repository structure
 

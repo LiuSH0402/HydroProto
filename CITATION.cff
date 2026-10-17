@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use HydroProto, please cite the software and the archived model checkpoints."
 title: "HydroProto: prototype-guided protein language modeling for bacterial hydrolase classification"
 type: software
-version: 0.1.0
-date-released: 2026-08-20
+version: 0.2.0
+date-released: 2026-10-17
 authors:
   - family-names: Liu
     given-names: Shang-Hua
@@ -24,3 +24,5 @@ keywords:
   - ESM-2
   - prototype learning
   - enzyme function annotation
+
+license: MIT

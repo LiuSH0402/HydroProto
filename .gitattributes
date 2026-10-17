@@ -9,3 +9,6 @@
 data/*.csv binary -eol
 *.sh text eol=lf
 *.ps1 text eol=crlf
+
+# Preserve bytes named by the evaluation-dataset checksums.
+data/revision/*.csv -text -eol
