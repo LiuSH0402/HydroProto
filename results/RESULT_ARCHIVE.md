@@ -10,7 +10,8 @@ their configurations, metrics, predictions and SHA-256 checksums:
 ## Compact tables included here
 
 - `final_test_summary.csv`: locked final evaluation on the full test set and nested
-  `<80%`, `<60%` and `<40%` subsets.
+  pooled `<80%/no-hit`, `<60%/no-hit` and `<40%/no-hit` groups. Historical machine
+  keys are preserved; no measured identity is assigned to no-hit sequences.
 - `final_test_bootstrap_ci.csv`: stratified bootstrap confidence intervals.
 - `final_test_paired_delta_ci.csv`: paired bootstrap differences among models.
 - `prototype_number_ablation_oof.csv`: out-of-fold K=1/3/5/7 comparison.

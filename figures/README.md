@@ -1,5 +1,5 @@
 # Figures
 
-Selected lightweight manuscript figures may be copied here for a release. Source
-tables and publication-resolution PDF/SVG/TIFF files are kept in the external
-result archive to avoid inflating the Git repository.
+`Figure1.png` illustrates the model workflow displayed in the main README.
+Publication-resolution versions of the other manuscript figures are not included
+in this lightweight directory.

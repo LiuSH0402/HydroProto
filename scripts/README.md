@@ -14,5 +14,9 @@ train a model or select hyperparameters from the fixed test set.
 - `summarize_model_cost.py` — parameter, training time, peak memory and inference
   cost tables and figures.
 
-Run any script with `--help` to see its required locked-result paths. Keep raw
-predictions immutable and write regenerated reports to a new output directory.
+The analysis CLIs document their required saved-result paths with `--help`.
+`make_manuscript_figures_tables.py` is an original plotting-workspace script rather
+than a standalone CLI; it expects the original result-directory layout. Its
+historical `lt40` key includes no-hit sequences, as explained in
+`../docs/DATA_PROVENANCE.md`. Keep raw predictions immutable and write regenerated
+reports to a new output directory.
