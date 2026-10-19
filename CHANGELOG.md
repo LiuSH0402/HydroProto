@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 — release version alignment, 2026-10-19
+
+- Set the package, runtime and citation versions to 1.0.0.
+- Provide a fixed v1.0.0 repository snapshot for the revised manuscript.
+- Preserve datasets, model checkpoints, training logic and numerical results.
+
 ## 0.2.1 — documentation cleanup, 2026-10-17
 
 - Remove the manuscript-only availability statement draft from the repository.
@@ -17,4 +23,4 @@
   model-download links. No new experiment code, predictions or statistical
   exports are included in this release.
 
-Software/data versions are separate from the existing model archive's version 1.0.0.
+Software/data and model-checkpoint versions identify separately published artifacts.

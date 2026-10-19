@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use HydroProto, please cite the software and the archived model checkpoints."
 title: "HydroProto: prototype-guided protein language modeling for bacterial hydrolase classification"
 type: software
-version: 0.2.1
-date-released: 2026-10-17
+version: 1.0.0
+date-released: 2026-10-19
 authors:
   - family-names: Liu
     given-names: Shang-Hua

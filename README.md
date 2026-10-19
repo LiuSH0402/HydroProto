@@ -4,6 +4,8 @@
 
 Prototype-guided ESM-2 models for five-class bacterial hydrolase classification.
 
+Version: **[1.0.0](https://github.com/LiuSH0402/HydroProto/tree/v1.0.0)**.
+
 ![HydroProto workflow](figures/Figure1.png)
 
 **Figure 1. HydroProto architecture and training workflow.** Protein sequences are
@@ -23,7 +25,7 @@ applicable. [Data provenance and filtering](docs/DATA_PROVENANCE.md) describe
 the author-reported January 2025 retrieval, EC-derived labels, cleaning rules
 and pooled identity/no-hit interpretation.
 
-The original fixed train/test files remain unchanged. The v0.2.0 update adds
+The original fixed train/test files remain unchanged. The repository also provides
 the [80%-component split and external test dataset](data/revision/README.md),
 with identifiers, source annotations, selection criteria and checksums.
 New experimental code, predictions and statistical exports are not included

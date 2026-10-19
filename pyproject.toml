@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hydroproto"
-version = "0.2.1"
+version = "1.0.0"
 description = "Prototype-guided ESM-2 models for bacterial hydrolase multiclass classification"
 readme = "README.md"
 license = {text = "MIT"}

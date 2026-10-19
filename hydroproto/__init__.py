@@ -9,7 +9,7 @@ __all__ = [
     "HydroMPC650MHead",
 ]
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 
 _LAZY_EXPORTS = {
